@@ -14,6 +14,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 import pytest
 import os
+import httpx
 
 BASE_URL = os.getenv("TEST_BASE_URL", "http://localhost:8000")
 
