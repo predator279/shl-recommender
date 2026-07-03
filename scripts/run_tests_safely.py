@@ -7,7 +7,7 @@ def main():
     print("Collecting tests...")
     
     # Run pytest collect-only to get all test nodes
-    cmd = ["pytest", "--collect-only", "-q"]
+    cmd = ["python", "-m", "pytest", "--collect-only", "-q"]
     result = subprocess.run(cmd, capture_output=True, text=True, shell=True)
     
     if result.returncode != 0:
@@ -34,7 +34,7 @@ def main():
         print(f"\n[{i}/{len(test_cases)}] Running: {test}")
         
         # Run the single test
-        test_cmd = ["pytest", test, "-v"]
+        test_cmd = ["python", "-m", "pytest", test, "-v"]
         test_res = subprocess.run(test_cmd, shell=True)
         
         if test_res.returncode == 0:
