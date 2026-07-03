@@ -16,9 +16,9 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 import pytest
-import httpx
+import os
 
-BASE_URL = "http://localhost:8000"
+BASE_URL = os.getenv("TEST_BASE_URL", "http://localhost:8000")
 
 
 def chat(messages: list[dict]) -> dict:
