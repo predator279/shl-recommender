@@ -1,0 +1,17 @@
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+pydantic>=2.9.0
+
+# LLM clients
+groq>=0.9.0
+google-genai>=2.0.0
+
+# Embeddings + Vector store
+sentence-transformers>=3.0.0
+faiss-cpu>=1.9.0
+
+# Utilities
+python-dotenv>=1.0.0
+rapidfuzz>=3.9.0
+httpx>=0.27.0
+pytest>=8.0.0
